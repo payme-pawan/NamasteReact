@@ -1,0 +1,6 @@
+Q1: Library vs Framework?
+
+    1.Both are the piece of code written by someone else to simply developers task.framework is more complex and defines how to build a particular app whereas library is a simple extention of a functionality.
+
+    2.Inversion Of Control(Ioc)-> In framework thye control is with framework wheras in library the control is with developer.
+
