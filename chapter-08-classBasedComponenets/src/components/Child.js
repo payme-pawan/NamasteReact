@@ -8,10 +8,22 @@ class Child extends Component {
     };
     console.log("Child-constrctor");
   }
-    
-    componentDidMount() {
-        console.log("Child-componentDidMount");
-    }
+
+  async componentDidMount() {
+    const data = await fetch("https://random.dog/woof.json");
+    const json = await data.json();
+    console.log("Child-componentDidMount");
+    console.log(data);
+    console.log(json);
+  }
+
+  componentDidUpdate() {
+    console.log("Child-componentDidUpdate");
+  }
+
+  componentWillUnmount() {
+    console.log("Child-componentWillUnmount")
+  }
 
   render() {
     return (
@@ -27,7 +39,6 @@ class Child extends Component {
         >
           count++
         </button>
-        <h3>{this.state.count2}</h3>
       </>
     );
   }
